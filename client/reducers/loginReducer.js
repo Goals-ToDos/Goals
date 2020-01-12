@@ -41,13 +41,13 @@ const loginReducer = (state = initialState, action) => {
             }
             else{
             //password error message
-             errorMessage = 'Username and Password combination does not exist. Please try again';
+             errorMessage = 'Username and Password combination does not exist. Please try again or Create an account';
              return {...state, errorMessage};
             } 
        }
        else{
          //error user does not exist message
-          errorMessage = 'User does not exist. Please click "Create an account" link above';
+          errorMessage = 'Username and Password combination does not exist. Please try again or Create an account';
           return {...state, errorMessage};
        }
     default: return state;

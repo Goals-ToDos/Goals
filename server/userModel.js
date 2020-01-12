@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs');
-const mongoDB = 'mongodb+srv://jenaepen:pen1321!@jenae-6dyj0.mongodb.net/test?retryWrites=true&w=majority';
+const mongoDB = 'mongodb+srv://Goals:Jenae@goals-1xliz.mongodb.net/test?retryWrites=true&w=majority';
 // connect mongoose to the mongoDB database and rename it to db
 mongoose.connect(mongoDB ,{ useNewUrlParser: true } );
 const db =mongoose.connection
