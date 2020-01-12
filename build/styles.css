@@ -1,0 +1,111 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/login_background.png);
+    background-color: lightblue;
+    background-size: cover;
+    height: 100%;
+}
+.loginBody{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+.goalsBody{
+    margin-top: 8%;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+.head{
+    margin: 2px;
+    /* width: auto; */
+}
+.medium_wide{
+    width:30%;
+    margin-left: 10px;
+}
+.large_wide{
+    width: 70%;
+}
+.loginBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.639);
+    padding: 10px;
+    box-shadow: 10px 15px 39px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+.loginLogo{
+    font-size: large;
+    font-family: sans-serif;
+    color: rgb(13, 29, 243);
+    font-weight: bold;
+
+   margin: 0%;
+}
+
+
+.mediumBox{
+    width: 25%;
+    margin-right: 2%;
+    align-self: flex-start;
+}
+#journal{
+    width: 55%;
+    height: 100px;
+    align-self: flex-start;
+    margin-top: 0.5%;
+}
+.goalContainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.5%;
+    color: rgb(25, 98, 186);
+} 
+.message{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(43, 126, 43);
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    color: rgb(160, 87, 23);
+}
+#header {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(4, 108, 94);
+}
+.displayBox {
+    display: flex;
+    align-items: flex-start;
+} 
+
+input {
+    margin: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    padding: 3px;
+    margin: 3px 3px 8px;
+    width: 20%;
+    align-self: center;
+} 
+.signup{
+    width: 40%;
+} 
