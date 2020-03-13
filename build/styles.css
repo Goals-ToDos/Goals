@@ -68,7 +68,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-left: 2.5%;
-    color: rgb(25, 98, 186);
+    color: rgb(25, 98, 100);
 } 
 .message{
     text-align: center;
