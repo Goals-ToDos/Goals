@@ -4,7 +4,7 @@
 import React from 'react';
 
 const scheduleDisplay = (props) => {
-  console.log('props in scheduleDisplay:', props)
+
 
 /***************************************************** style *******************************/
 const scheduleDisplayStyle= { 

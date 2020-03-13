@@ -24,7 +24,6 @@ const scheduleReducer = (state = initialState, action) => {
         case types.SAVE_GOAL_NAME:
             const newScheduleObj = {...state.scheduleItem};
             newScheduleObj.goalName = action.payload;
-            console.log('action.payload:', action.payload)
             return {... state, scheduleItem:newScheduleObj};
             
         default: return state

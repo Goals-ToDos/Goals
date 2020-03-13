@@ -35,10 +35,10 @@ class CreateContainer extends Component {
 save(){
   //goal name
   const goalName =document.querySelector("#goalName").value.toUpperCase();
-  console.log('goalName:', goalName)
+
 
   const dueDate =document.querySelector("#datepicker").value;
-  console.log('dueDate:', dueDate)
+
   
   //array of goal details
   const detailValueArray=[];
@@ -47,20 +47,18 @@ save(){
     detailValueArray.push(element.value);
   })
 
-  console.log("detailValueArray",detailValueArray);
   //array of actions
   const actionValueArray=[];
   const actionArray =document.querySelectorAll(".action");
   actionArray.forEach((element)=>{
     actionValueArray.push(element.value);
   })
-  console.log("actionValueArray",actionValueArray);
 
   let newThis =this;
   //save the goal
   //update the user goal
   let url = '/user/'+this.props.currentUser;
-  console.log('url:', url)
+
 
   //get access to this in the promise
 
@@ -82,7 +80,7 @@ save(){
 
       add_goal_promise.then(()=>{
         let data = {goals: newThis.props.goalArray};
-        console.log('data before fetch:', data)
+
         fetch(url, {
           method: 'PATCH',
           body: JSON.stringify(data), // data is username and password
@@ -91,7 +89,7 @@ save(){
           }
         })
         .then(response => response.json())
-        .then(result=> console.log('patch the result is: ',result))
+        .then(result=> ('patch the result is: ',result))
         .then(()=>{
           newThis.props.resetDetailAndAction();
           newThis.props.changePage("goals")
@@ -104,7 +102,6 @@ save(){
   render() {
 
     //************************ create extra detail feature
-    console.log(this.props)
     let extraDetailArray = [];
     for(let i=1; i<this.props.detailArray.length; i++){
       let key = "detail"+i;
@@ -117,7 +114,6 @@ save(){
     }  
     
      //***************************** create extra action feature ******************
-     console.log(this.props)
      let extraActionArray = [];
      for(let i=1; i<this.props.actionArray.length; i++){
        let key = "action"+i;

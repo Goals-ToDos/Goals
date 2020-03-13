@@ -4,7 +4,6 @@ import React from 'react';
 
 
 const goalDisplay = (props) => {
-  console.log('props:', props)
   const header ={
     textAlign: "center",
     margin: "0%",
@@ -32,7 +31,6 @@ const smallBox= {
   alignSelf: "flex-start",
   textAlign: "center",
 }
-console.log("goal display props goalobject:",props.goalObject);
   let goalDetailArray =[];
 
     for(let i=0; i < props.goalObject.goalDetails.length; i++){

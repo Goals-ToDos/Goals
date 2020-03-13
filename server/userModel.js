@@ -11,7 +11,7 @@ db.on('error', console.error.bind(console,'MongoDB connected error: '))
 
 //once the connection is setup state connected to database
 mongoose.connection.once('open', () => {
-  console.log('Connected to Database');
+  //console.log('Connected to Database');
 });
 
  const SALT_WORK_FACTOR = 10;

@@ -89,7 +89,6 @@ const UserController = {
   // The student's first name will be sent in the request parameter 'name'
   // This should send a success status code
   deleteUser(req, res) {
-    console.log("in delete user")
     const {username} = req.params;
     User.deleteOne({username},(err, user)=>{
       if(err){
@@ -100,15 +99,14 @@ const UserController = {
   },
 
   oAuth(req,res){
-    console.log('in oAuth');
+
     //we are doing a get request and passing info via urlencoded parameter "?"
     fetch('https://github.com/login/oauth/authorize?client_id=408d83d264e0e0e08cef').then(response => {
       res.redirect(response.url);
     })
   },
   code(req, res,next){
-    console.log("in code")
-    console.log('req.query.code:', req.query.code);
+
     const {code} = req.query;
 
     request.post('https://github.com/login/oauth/access_token')
@@ -119,7 +117,6 @@ const UserController = {
     .set('Accept', 'application/json')
     .then(result => {
         const {access_token} =result.body;
-        console.log('access_token',access_token);
         res.locals.token=access_token;
         return next();
     })
@@ -127,11 +124,9 @@ const UserController = {
   },
   getInfo(req,res){
 
-      console.log('res.locals.token:', res.locals.token)
       request.get('https://api.github.com/user')
         .set('Authorization', 'token '+res.locals.token)
         .then( newResult =>{
-          console.log('newResult',newResult)
         })
   }
 };

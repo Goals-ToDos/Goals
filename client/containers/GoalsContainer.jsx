@@ -33,7 +33,6 @@ class GoalsContainer extends Component {
     fetch(url)
     .then(response => response.json())
     .then(result => {
-      console.log('result in getGoals - container:', result)   
         store.dispatch(setGoal(result))
     })
   }
@@ -54,7 +53,6 @@ class GoalsContainer extends Component {
     // ******************************** coding **********************************
     // setting goal array
     let goalElements = [];
-    console.log("goal container props goalArray:",this.props.goalArray)
     for(let i=0; i < this.props.goalArray.length; i++){
         let key= "goal" +i;
         goalElements.push(<GoalDisplay key={key} goalObject={this.props.goalArray[i]}/>)
