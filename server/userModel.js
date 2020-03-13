@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs');
 const mongoDB = 'mongodb+srv://Goals:Jenae@goals-1xliz.mongodb.net/test?retryWrites=true&w=majority';
 // connect mongoose to the mongoDB database and rename it to db
-mongoose.connect(mongoDB ,{ useNewUrlParser: true } );
+mongoose.connect(mongoDB ,{ useNewUrlParser: true, useUnifiedTopology: true  } );
 const db =mongoose.connection
 
 //console log the error if there is one
@@ -11,7 +11,7 @@ db.on('error', console.error.bind(console,'MongoDB connected error: '))
 
 //once the connection is setup state connected to database
 mongoose.connection.once('open', () => {
-  //console.log('Connected to Database');
+  console.log('Connected to Database');
 });
 
  const SALT_WORK_FACTOR = 10;
